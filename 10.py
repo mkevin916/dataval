@@ -1,4 +1,9 @@
-input_file = input("Enter the name of the input file: ")
+while True:
+    input_file = input("Enter the name of the input file: ")
+    if input_file.endswith('.txt'):
+        break
+    else:
+        print("Invalid file type. Please enter a .txt file.")
 
 with open(input_file, 'r') as file:
     data = file.read()
